@@ -7,14 +7,14 @@ if vim.g.neovide then
   vim.g.neovide_window_blurred = true
 
   -- Cursor Settings
-  vim.g.neovide_cursor_trail_size = 0.1
+  vim.g.neovide_cursor_trail_size = 0.05
   vim.g.neovide_cursor_animate_in_insert_mode = true
   vim.g.neovide_cursor_smooth_blink = true
   vim.g.neovide_cursor_vfx_mode = "railgun"
   vim.g.neovide_cursor_animation_length = 0.1
   vim.g.neovide_cursor_vfx_opacity = 200
-  vim.g.neovide_cursor_vfx_particle_lifetime = 0.8
-  vim.g.neovide_cursor_vfx_particle_speed = 10.0
+  vim.g.neovide_cursor_vfx_particle_lifetime = 1
+  vim.g.neovide_cursor_vfx_particle_speed = 9.0
   vim.g.neovide_cursor_vfx_particle_phase = 1.5
   vim.g.neovide_cursor_vfx_particle_curl = 1.0
 

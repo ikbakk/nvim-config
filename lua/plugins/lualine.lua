@@ -16,7 +16,7 @@ local colors = {
 local custom_theme = {
   normal = {
     a = { fg = colors.bg, bg = colors.yellow, gui = "bold" },
-    b = { fg = colors.fg, bg = colors.gray1 },
+    b = { fg = colors.fg, bg = colors.gray3 },
     c = { fg = colors.fg, bg = colors.bg },
   },
   command = { a = { fg = colors.bg, bg = colors.green, gui = "bold" } },
