@@ -9,6 +9,7 @@ return {
   },
   opts = {},
   keys = {
+    { "<leader>t", desc = "Tailwind Tools" },
     -- Conceal related keymaps
     { "<leader>tc", "<cmd>TailwindConcealToggle<cr>", desc = "Toggle Tailwind Conceal" },
 

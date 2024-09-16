@@ -19,7 +19,7 @@ if vim.g.neovide then
   vim.g.neovide_cursor_vfx_particle_curl = 1.0
 
   -- Font Settings
-  vim.o.guifont = "FiraCode Nerd Font:h11" -- Adjust the font and size
+  vim.o.guifont = "SpaceMono Nerd Font:h11" -- Adjust the font and size
 
   -- Keybinds
   vim.g.neovide_input_use_logo = 1
