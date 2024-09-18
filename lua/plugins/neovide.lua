@@ -1,10 +1,13 @@
 if vim.g.neovide then
   -- Display settings
   vim.g.neovide_transparency = 1
-  vim.g.neovide_scroll_animation_length = 0.1
+  vim.g.neovide_scroll_animation_length = 0.2
   vim.g.neovide_floating_blur_amount_x = 2.0
   vim.g.neovide_floating_blur_amount_y = 2.0
   vim.g.neovide_window_blurred = true
+  vim.g.neovide_transparency = 0.6
+  vim.g.neovide_scroll_animation_far_lines = 0
+  vim.g.neovide_refresh_rate = 75
 
   -- Cursor Settings
   vim.g.neovide_cursor_trail_size = 0.05
@@ -19,7 +22,7 @@ if vim.g.neovide then
   vim.g.neovide_cursor_vfx_particle_curl = 1.0
 
   -- Font Settings
-  vim.o.guifont = "SpaceMono Nerd Font:h11" -- Adjust the font and size
+  vim.o.guifont = "FiraCode Nerd Font:h11" -- Adjust the font and size
 
   -- Keybinds
   vim.g.neovide_input_use_logo = 1
