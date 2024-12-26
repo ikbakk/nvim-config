@@ -22,6 +22,40 @@ return {
           },
         },
       },
+      default_component_configs = {
+        indent = {
+          with_expanders = true, -- if nil and file nesting is enabled, will enable expanders
+          expander_collapsed = "",
+          expander_expanded = "",
+          expander_highlight = "NeoTreeExpander",
+        },
+        icon = {
+          folder_closed = "",
+          folder_open = "",
+          folder_empty = "",
+          default = "",
+        },
+        modified = {
+          symbol = "[+]",
+          highlight = "NeoTreeModified",
+        },
+        name = {
+          trailing_slash = false,
+          use_git_status_colors = true,
+          highlight = "NeoTreeFileName",
+        },
+        git_status = {
+          symbols = {
+            -- Change type
+            added = "✚",
+            deleted = "✖",
+            modified = "",
+            renamed = "",
+            -- Status type
+            untracked = "",
+          },
+        },
+      },
     },
   },
 }
