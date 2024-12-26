@@ -14,8 +14,10 @@ return {
       },
       filesystem = {
         filtered_items = {
-          hide_dotfiles = false,
-          hide_gitignored = false,
+          visible = true,
+          hide_dotfiles = true,
+          hide_gitignored = true,
+          hide_hidden = true,
           hide_by_name = {
             "node_modules",
             ".git",
@@ -30,10 +32,22 @@ return {
           expander_highlight = "NeoTreeExpander",
         },
         icon = {
-          folder_closed = "",
-          folder_open = "",
+          folder_closed = "",
+          folder_open = "",
           folder_empty = "",
-          default = "",
+          default = " ",
+          highlight = "NeoTreeFileIcon",
+          provider = function(icon, node, state) -- default icon provider utilizes nvim-web-devicons if available
+            if node.type == "file" or node.type == "terminal" then
+              local success, web_devicons = pcall(require, "nvim-web-devicons")
+              local name = node.type == "terminal" and "terminal" or node.name
+              if success then
+                local devicon, hl = web_devicons.get_icon(name)
+                icon.text = devicon or icon.text
+                icon.highlight = hl or icon.highlight
+              end
+            end
+          end,
         },
         modified = {
           symbol = "[+]",
@@ -44,15 +58,27 @@ return {
           use_git_status_colors = true,
           highlight = "NeoTreeFileName",
         },
+        diagnostics = {
+          symbols = {
+            hint = " ",
+            info = " ",
+            warning = " ",
+            error = " ",
+          },
+        },
         git_status = {
           symbols = {
             -- Change type
-            added = "✚",
-            deleted = "✖",
-            modified = "",
-            renamed = "",
+            added = "✚ ",
+            deleted = "✖ ",
+            modified = " ",
+            renamed = " ",
             -- Status type
-            untracked = "",
+            untracked = " ",
+            ignored = " ",
+            unstaged = " ",
+            staged = " ",
+            conflict = " ",
           },
         },
       },
