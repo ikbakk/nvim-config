@@ -13,14 +13,14 @@ return {
         delete_check_events = "TextChanged,InsertLeave",
       })
 
-      -- Key mappings for LuaSnip
-      vim.keymap.set({ "i", "s" }, "<M-f>", function()
+      -- Key mappings for LuaSnip: Use <M-f> to expand or jump in snippets
+      vim.keymap.set({ "i", "s" }, "<A-f>", function()
         if ls.expand_or_jumpable() then
           ls.expand_or_jump()
         end
       end, { desc = "Expand or jump in snippet" })
 
-      vim.keymap.set({ "i", "s" }, "<M-S-f>", function()
+      vim.keymap.set({ "i", "s" }, "<A-S-f>", function()
         if ls.jumpable(-1) then
           ls.jump(-1)
         end
@@ -37,8 +37,8 @@ return {
       require("luasnip.loaders.from_vscode").lazy_load()
 
       -- Ensure <Tab> and <S-Tab> are not affected by LuaSnip
-      vim.keymap.set("i", "<Tab>", "<Tab>", { noremap = true })
-      vim.keymap.set("i", "<S-Tab>", "<S-Tab>", { noremap = true })
+      -- vim.keymap.set("i", "<Tab>", "<Tab>", { noremap = true })
+      -- vim.keymap.set("i", "<S-Tab>", "<S-Tab>", { noremap = true })
     end,
   },
 }
